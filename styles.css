@@ -31,13 +31,13 @@ header h1 {
     font-size: 32px;
 }
 
-header h1 a {
+header h1 a.header-name {
     color: #fff;
     text-decoration: none;
 }
 
-header h1 a:hover {
-    text-decoration: underline;
+header h1 a.header-name:hover {
+    text-decoration: none;
 }
 
 header p {
@@ -58,7 +58,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ccc;
     text-decoration: none;
     font-size: 16px;
 }
@@ -68,8 +68,8 @@ nav ul li a:hover {
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1170px; /* Adjusted to account for 30px left margin */
+    margin: 0 auto 0 30px;
     display: flex;
 }
 
@@ -106,7 +106,8 @@ nav ul li a:hover {
 
 .contact-links p {
     margin: 10px 0;
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.8;
 }
 
 .contact-links a {
