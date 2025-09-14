@@ -51,11 +51,11 @@ nav ul li a {
 }
 
 .container {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
+    max-width: 1200px;
+    margin: 0;          /* no auto-centering */
     display: flex;
 }
+
 
 .sidebar {
     width: 200px;
