@@ -1100,7 +1100,7 @@ nav ul li a {
 
 .sidebar {
     width: 150px;
-    padding: 20px;
+    padding: 10px;
     background-color: #f9f9f9;
 }
 @media (max-width: 768px) {
