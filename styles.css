@@ -1,9 +1,10 @@
 body {
     font-family: Arial, sans-serif;
+    font-size: 16px;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    padding-bottom: 4rem; /* Adds space at the bottom to prevent content overlap */
+    padding-bottom: 4rem;
 }
 
 header {
@@ -17,6 +18,8 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .header-left {
@@ -25,12 +28,21 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 32px;
+}
+
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header h1 a:hover {
+    text-decoration: underline;
 }
 
 header p {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 16px;
 }
 
 nav ul {
@@ -48,31 +60,53 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 .container {
     max-width: 1200px;
-    margin: 0;          /* no auto-centering */
+    margin: 0 auto;
     display: flex;
 }
 
-
 .sidebar {
-    width: 200px;
-    padding: 15px;
+    width: 300px;
+    padding: 20px;
     background-color: #f9f9f9;
 }
 
 .profile-pic {
-    width: 150px;
+    width: 200px;
     height: auto;
     border-radius: 50%;
     margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-name {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 5px 0;
+}
+
+.profile-occupation {
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    margin: 0 0 20px 0;
+    color: #555;
 }
 
 .contact-links p {
     margin: 10px 0;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 .contact-links a {
@@ -90,6 +124,7 @@ nav ul li a {
 }
 
 h2 {
+    font-size: 24px;
     border-bottom: 2px solid #333;
     padding-bottom: 0.5rem;
 }
@@ -99,21 +134,19 @@ ul {
     padding-left: 20px;
 }
 
-/* Initial styles to hide the footer */
 footer {
     background: #333;
     color: #fff;
     text-align: left;
-    padding: 1rem 2rem;
+    padding: 1rem 20px;
     position: fixed;
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
-    transform: translateY(100%); /* Initially hide the footer */
-    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Show the footer when scrolled */
 footer.show {
-    transform: translateY(0); /* Show the footer */
+    transform: translateY(0);
 }
