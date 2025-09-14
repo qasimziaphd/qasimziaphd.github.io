@@ -1093,7 +1093,7 @@ nav ul li a {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px; /* Adjust this; smaller value narrows the page */
     margin: 0 auto;
     display: flex;
 }
@@ -1103,12 +1103,27 @@ nav ul li a {
     padding: 20px;
     background-color: #f9f9f9;
 }
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stacks sidebar on top of main content */
+    }
+    .sidebar {
+        width: 100%; /* Full width on mobile */
+    }
+}
 
 .profile-pic {
     width: 200px;
     height: auto;
     border-radius: 50%;
     margin-bottom: 20px;
+    display: block;
+    margin: 0 auto; /* Centers the image horizontally in the sidebar */
+}
+@media (max-width: 768px) {
+    .profile-pic {
+        width: 150px; /* Smaller on mobile screens */
+    }
 }
 
 .contact-links p {
