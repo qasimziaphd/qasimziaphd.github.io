@@ -11,7 +11,11 @@ header {
     background-color: #007bff;
     color: white;
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
@@ -35,13 +39,67 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-section {
-    padding: 2rem;
-    margin: 1rem auto;
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 60px; /* Below header */
+    left: 0;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.sidebar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar h1 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+.sidebar p {
+    font-style: italic;
+    margin: 0 0 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li i {
+    color: #007bff;
+    width: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.main {
+    margin-left: 290px; /* Sidebar width + padding */
+    padding: 80px 20px 20px 20px; /* Top padding for header */
     max-width: 800px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 h1, h2 {
@@ -57,12 +115,14 @@ a:hover {
     text-decoration: underline;
 }
 
+section {
+    margin-bottom: 2rem;
+}
+
 footer {
     text-align: center;
     padding: 1rem;
     background-color: #007bff;
     color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    margin-left: 290px; /* Align with main */
 }
